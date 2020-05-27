@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="kz.diploma.workgram.views.profiles.ProfileViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:background="@color/main"
+            tools:context=".views.offers.OffersFragment">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/snow"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAvatar"
+                        android:layout_width="110dp"
+                        android:layout_height="114dp"
+                        app:cardCornerRadius="57dp"
+                        app:cardElevation="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:imgUrl="@{viewModel.profile.avatar}"
+                        android:scaleType="centerCrop" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/side_margin"
+                        android:paddingEnd="@dimen/side_margin">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/snow"
+                            android:layout_marginStart="@dimen/side_margin"
+                            android:layout_marginEnd="@dimen/side_margin">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/nameInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_name"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.name}"
+                                android:textColorHint="@color/snow" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilSurname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/snow"
+                            android:layout_marginStart="@dimen/side_margin"
+                            android:layout_marginEnd="@dimen/side_margin">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/surnameInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_surname"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.surname}"
+                                android:textColorHint="@color/snow" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RatingBar
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:rating="@{viewModel.profile.rating_score.floatValue()}"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/snow"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/side_margin"
+                        android:paddingEnd="@dimen/side_margin">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/snow"
+                            android:layout_marginStart="@dimen/side_margin"
+                            android:layout_marginEnd="@dimen/side_margin">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/emailInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_email"
+                                android:inputType="text"
+                                android:enabled="false"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.email}"
+
+                                android:textColorHint="@color/snow" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/snow"
+                            android:layout_marginStart="@dimen/side_margin"
+                            android:layout_marginEnd="@dimen/side_margin">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/phoneInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_phone"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.phone}"
+
+                                android:textColorHint="@color/snow" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilNick"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/snow"
+                                android:layout_marginStart="@dimen/side_margin"
+                                android:layout_marginEnd="@dimen/side_margin">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/nickInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_nick"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.nickname}"
+                                android:textColorHint="@color/snow" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/snow"
+                                android:layout_marginStart="@dimen/side_margin"
+                                android:layout_marginEnd="@dimen/side_margin">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/descriptionInput"
+                                style="@style/infoCreateProject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_description"
+                                android:inputType="textMultiLine"
+                                android:lines="4"
+                                android:maxLines="6"
+                                android:minLines="2"
+                                android:textAlignment="textStart"
+                                android:text="@{viewModel.profile.description}"
+                                android:textColorHint="@color/snow" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUpdate"
+                    style="@style/CardViewPostButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        style="@style/CardViewPostButtonText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/update" />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tvLogout"
+                    style="@style/signOutText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="12dp"
+                    android:paddingStart="@dimen/side_margin"
+                    android:paddingEnd="@dimen/side_margin"
+                    android:paddingBottom="12dp"
+                    android:textAlignment="center"
+                    android:text="@string/logout"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@drawable/snow_selector"/>
+            </LinearLayout>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:setVisibility="@{viewModel.loadingStatus}" />
+        </RelativeLayout>
+    </ScrollView>
+</layout>

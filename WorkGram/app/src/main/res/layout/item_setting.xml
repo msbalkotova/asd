@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="item"
+            type="kz.diploma.workgram.models.settings.SettingDto" />
+        <variable
+            name="selector"
+            type="kz.diploma.workgram.views.ItemSelector" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginEnd="@dimen/side_margin"
+        android:layout_marginBottom="5dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{() ->selector.onItemSelected(item)}">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/infoBlackOffersTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/side_margin"
+                android:text="@{item.title}"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="@color/gray"
+                android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"/>
+
+            <TextView
+                style="@style/infoBlackOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/side_margin"
+                android:text="@{item.description}"
+                android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

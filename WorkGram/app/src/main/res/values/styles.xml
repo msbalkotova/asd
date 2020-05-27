@@ -1,0 +1,182 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="PageTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/page_title</item>
+        <item name="android:textColor">@color/pageTitle</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_semi_bold</item>
+    </style>
+    <style name="topicTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/topic_text</item>
+        <item name="android:textColor">@color/pageTitle</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginBottom">17dp</item>
+        <item name="cardCornerRadius">9dp</item>
+        <item name="cardElevation">12dp</item>
+    </style>
+    <style name="LoginTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/login_text</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="LoginFill" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_regular</item>
+        <item name="android:hint">@string/login_hint</item>
+<!--        <item name="android:textSize">@dimen/font_medium</item>-->
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+<!--        <item name="android:fontFamily">@font/montserrat_medium</item>-->
+    </style>
+    <style name="PasswordFill" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+        <item name="android:hint">@string/password_hint</item>
+        <!--        <item name="android:textSize">@dimen/font_medium</item>-->
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <!--        <item name="android:fontFamily">@font/montserrat_medium</item>-->
+    </style>
+    <style name="CardViewPostButton" parent="CardViewStyle">
+        <item name="cardBackgroundColor">@color/top</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">50dp</item>
+    </style>
+    <style name="CardViewPostButtonText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">@dimen/post_button_text</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_bold</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="CardViewMainCenterButton">
+        <item name="cardBackgroundColor">@color/top</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">9dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:innerRadius">0dp</item>
+        <item name="cardCornerRadius">45dp</item>
+    </style>
+    <style name="CardViewMainCenterButtonText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_bold</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingBottom">20dp</item>
+<!--        <item name="android:textAlignment">center</item>-->
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="CardViewImage">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">25dp</item>
+    </style>
+    <style name="CardViewMainHorizontalButton">
+        <item name="cardBackgroundColor">@color/top</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">9dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:innerRadius">0dp</item>
+        <item name="cardCornerRadius">45dp</item>
+    </style>
+    <style name="CardViewBottomPaint">
+        <item name="cardBackgroundColor">@color/top</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">9dp</item>
+        <item name="android:innerRadius">0dp</item>
+        <item name="android:layout_marginBottom">-90dp</item>
+        <item name="cardCornerRadius">250dp</item>
+    </style>
+    <style name="InfoDarkBlue" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlack" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlackRight" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:gravity">right</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlackLeft" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlackOffersTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium_18</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="signOutText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/font_small_13</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoCreateProject" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium_18</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlackOffersCategory" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium_20</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="infoBlackOffers" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:fontFamily">@font/baloo_tamma2_medium</item>
+    </style>
+    <style name="midRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">50dip</item>
+        <item name ="android:numStars">5</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+</resources>
